@@ -1,4 +1,6 @@
-// components/SajuTable.tsx
+import Image from 'next/image';
+import cloud1 from '../../../public/assets/table_cloud1.png';
+import cloud2 from '../../../public/assets/table_cloud2.png';
 
 type Cell = { cn: string | string[]; kr: string | string[] };
 type Row = [Cell, Cell, Cell, Cell, Cell];
@@ -59,8 +61,20 @@ export default function SajuTable() {
     ],
   ];
   return (
-    <div className='border-[7px] border-double p-4'>
-      <span className='flex justify-center mb-1'>김로켓님의 사주</span>
+    <div className='w-[95%] border-[7px] border-double p-4 relative'>
+      <Image
+        src={cloud1}
+        alt='cloud1'
+        style={{ width: '56px', height: '38px' }}
+        className='absolute left-0 top-10'
+      ></Image>
+      <Image
+        src={cloud2}
+        alt='cloud2'
+        style={{ width: '56px', height: '38px' }}
+        className='absolute right-0 top-6 '
+      ></Image>
+      <span className='flex justify-center mb-1 mt-4'>김로켓님의 사주</span>
       <span className='flex justify-center font-semibold mb-5 text-xl'>
         1980년 8월27일 08:10
       </span>
@@ -84,7 +98,7 @@ export default function SajuTable() {
         </thead>
         <tbody>
           {data.map(([col1, col2, col3, col4, col5], i) => (
-            <tr key={col1.cn + '-' + i} className='text-[12px]'>
+            <tr key={col1.cn + '-' + i} className='text-[11px]'>
               <td
                 className={`border-[2px] border-l-0 p-2 w-[18%] ${
                   i === 1 ? 'border-b border-b-[#8a8a8a]' : ''
@@ -150,7 +164,7 @@ export default function SajuTable() {
                 ) : i === 2 ? (
                   <div className='h-[65px]  p-1 rounded-[15px] bg-[#2f2f2f] text-white flex flex-col justify-center'>
                     <div>{col4.kr}</div>
-                    <div className='text-4xl'>{col4.cn}</div>
+                    <div className='text-2xl'>{col4.cn}</div>
                   </div>
                 ) : (
                   <>
@@ -160,7 +174,7 @@ export default function SajuTable() {
               </td>
 
               <td
-                className={`border-[2px] border-l p-2 w-[20.5%] bg-white ${
+                className={`border-[2px] border-l p-[4px] w-[20.5%] bg-white ${
                   i === 1 ? 'border-b border-b-[#8a8a8a]' : ''
                 } ${i === 2 ? 'border-t border-t-[#8a8a8a]' : ''}`}
               >
@@ -171,12 +185,12 @@ export default function SajuTable() {
                     </div>
                   ))
                 ) : i === 1 ? (
-                  <div className='h-[65px]  p-1 rounded-[15px] bg-[#2f2f2f] text-white flex flex-col justify-center'>
+                  <div className='h-[65px] rounded-[15px] bg-[#2f2f2f] text-white flex flex-col justify-center'>
                     <div>{col4.kr}</div>
                     <div className='text-2xl'>{col4.cn}</div>
                   </div>
                 ) : i === 2 ? (
-                  <div className='h-[65px] border-2 p-1 rounded-[15px] flex flex-col justify-center'>
+                  <div className='h-[65px] border-2 rounded-[15px] flex flex-col justify-center'>
                     <div>{col5.kr}</div>
                     <div className='text-2xl'>{col5.cn}</div>
                   </div>
