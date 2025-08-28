@@ -74,9 +74,9 @@ export default function SajuTable() {
         style={{ width: '56px', height: '38px' }}
         className='absolute right-0 top-6 '
       ></Image>
-      <span className='flex justify-center mb-1 mt-4'>김로켓님의 사주</span>
+      <span className='flex justify-center mb-1 mt-4'>박지우님의 사주</span>
       <span className='flex justify-center font-semibold mb-5 text-xl'>
-        1980년 8월27일 08:10
+        1999년 7월27일 12:00
       </span>
       <table className='w-full border-collapse text-[21px] text-center font-semibold'>
         <thead>
@@ -98,7 +98,7 @@ export default function SajuTable() {
         </thead>
         <tbody>
           {data.map(([col1, col2, col3, col4, col5], i) => (
-            <tr key={col1.cn + '-' + i} className='text-[11px]'>
+            <tr key={col1.cn + '-' + i} className='text-[10px]'>
               <td
                 className={`border-[2px] border-l-0 p-2 w-[18%] ${
                   i === 1 ? 'border-b border-b-[#8a8a8a]' : ''
