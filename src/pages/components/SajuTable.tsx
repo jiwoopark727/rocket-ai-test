@@ -113,13 +113,13 @@ export default function SajuTable() {
                 } ${i === 2 ? 'border-t border-t-[#8a8a8a]' : ''}`}
               >
                 {i === 1 ? (
-                  <div className='h-[50px] sm:h-[65px]  p-1 rounded-[15px] bg-[#2f2f2f] text-white flex flex-col justify-center'>
+                  <div className='min-h-[50px] sm:min-h-[65px] px-2 py-1 sm:py-2 rounded-[15px] bg-[#2f2f2f] text-white flex flex-col justify-center'>
                     <div>{col2.kr}</div>
                     <div className='text-2xl'>{col2.cn}</div>
                     <div>陽水</div>
                   </div>
                 ) : i === 2 ? (
-                  <div className='h-[50px] sm:h-[65px]  p-1 rounded-[15px] bg-[#18868C] text-white flex flex-col justify-center'>
+                  <div className='min-h-[50px] sm:min-h-[65px] px-2 py-1 sm:py-2 rounded-[15px] bg-[#18868C] text-white flex flex-col justify-center'>
                     <div>{col2.kr}</div>
                     <div className='text-2xl'>{col2.cn}</div>
                     <div>陽木</div>
@@ -137,13 +137,13 @@ export default function SajuTable() {
                 } ${i === 2 ? 'border-t border-t-[#8a8a8a]' : ''}`}
               >
                 {i === 1 ? (
-                  <div className='h-[50px] sm:h-[65px] p-1 rounded-[15px] bg-[#c23030] text-white flex flex-col justify-center'>
+                  <div className='min-h-[50px] sm:min-h-[65px] px-2 py-1 sm:py-2 rounded-[15px] bg-[#c23030] text-white flex flex-col justify-center'>
                     <div>{col3.kr}</div>
                     <div className='text-2xl'>{col3.cn}</div>
                     <div>陰火</div>
                   </div>
                 ) : i === 2 ? (
-                  <div className='h-[50px] sm:h-[65px]  p-1 rounded-[15px] bg-[#c23030] text-white flex flex-col justify-center'>
+                  <div className='min-h-[50px] sm:min-h-[65px] px-2 py-1 sm:py-2 p-1 rounded-[15px] bg-[#c23030] text-white flex flex-col justify-center'>
                     <div>{col3.kr}</div>
                     <div className='text-2xl'>{col3.cn}</div>
                     <div>陰火</div>
@@ -161,13 +161,13 @@ export default function SajuTable() {
                 } ${i === 2 ? 'border-t border-t-[#8a8a8a]' : ''}`}
               >
                 {i === 1 ? (
-                  <div className='h-[50px] sm:h-[65px] p-1 rounded-[15px] bg-[#2f2f2f] text-white flex flex-col justify-center'>
+                  <div className='min-h-[50px] sm:min-h-[65px] px-2 py-1 sm:py-2 rounded-[15px] bg-[#2f2f2f] text-white flex flex-col justify-center'>
                     <div>{col4.kr}</div>
                     <div className='text-2xl'>{col4.cn}</div>
                     <div>陰水</div>
                   </div>
                 ) : i === 2 ? (
-                  <div className='h-[50px] sm:h-[65px] p-1 rounded-[15px] bg-[#2f2f2f] text-white flex flex-col justify-center'>
+                  <div className='min-h-[50px] sm:min-h-[65px] px-2 py-1 sm:py-2 rounded-[15px] bg-[#2f2f2f] text-white flex flex-col justify-center'>
                     <div>{col4.kr}</div>
                     <div className='text-2xl'>{col4.cn}</div>
                     <div>陰水</div>
@@ -191,13 +191,13 @@ export default function SajuTable() {
                     </div>
                   ))
                 ) : i === 1 ? (
-                  <div className='h-[50px] sm:h-[65px] p-1 rounded-[15px] bg-[#2f2f2f] text-white flex flex-col justify-center'>
+                  <div className='min-h-[50px] sm:min-h-[65px] px-2 py-1 sm:py-2 rounded-[15px] bg-[#2f2f2f] text-white flex flex-col justify-center'>
                     <div>{col5.kr}</div>
                     <div className='text-2xl'>{col5.cn}</div>
                     <div>陰水</div>
                   </div>
                 ) : i === 2 ? (
-                  <div className='h-[50px] sm:h-[65px] p-1 border-2 rounded-[15px] flex flex-col justify-center'>
+                  <div className='min-h-[50px] sm:min-h-[65px] px-2 py-1 sm:py-2 border-2 rounded-[15px] flex flex-col justify-center'>
                     <div>{col5.kr}</div>
                     <div className='text-2xl'>{col5.cn}</div>
                     <div>陰金</div>
