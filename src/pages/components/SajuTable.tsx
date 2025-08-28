@@ -66,19 +66,19 @@ export default function SajuTable() {
         src={cloud1}
         alt='cloud1'
         style={{ width: '56px', height: '38px' }}
-        className='absolute left-0 top-10'
+        className='absolute left-[0%] top-[7%]'
       ></Image>
       <Image
         src={cloud2}
         alt='cloud2'
         style={{ width: '56px', height: '38px' }}
-        className='absolute right-0 top-6 '
+        className='absolute right-[0%] top-[5%]'
       ></Image>
       <span className='flex justify-center mb-1 mt-4'>박지우님의 사주</span>
       <span className='flex justify-center font-semibold mb-5 text-xl'>
         1999년 7월27일 12:00
       </span>
-      <table className='w-full border-collapse text-[21px] text-center font-semibold'>
+      <table className='w-full border-collapse text-[12px] sm:text-[16px] md:text-[18px] lg:text-[21px] text-center font-semibold'>
         <thead>
           <tr>
             <th className='border-[2px] border-t-0 border-l-0 p-2'> </th>
@@ -98,13 +98,13 @@ export default function SajuTable() {
         </thead>
         <tbody>
           {data.map(([col1, col2, col3, col4, col5], i) => (
-            <tr key={col1.cn + '-' + i} className='text-[10px]'>
+            <tr key={col1.cn + '-' + i} className='text-[8px]'>
               <td
                 className={`border-[2px] border-l-0 p-2 w-[18%] ${
                   i === 1 ? 'border-b border-b-[#8a8a8a]' : ''
                 } ${i === 2 ? 'border-t border-t-[#8a8a8a]' : ''}`}
               >
-                {col1.cn} <p>({col1.kr})</p>
+                {col1.cn} <p className='break-words'>({col1.kr})</p>
               </td>
 
               <td
@@ -113,18 +113,20 @@ export default function SajuTable() {
                 } ${i === 2 ? 'border-t border-t-[#8a8a8a]' : ''}`}
               >
                 {i === 1 ? (
-                  <div className='h-[65px]  p-1 rounded-[15px] bg-[#2f2f2f] text-white flex flex-col justify-center'>
+                  <div className='h-[50px] sm:h-[65px]  p-1 rounded-[15px] bg-[#2f2f2f] text-white flex flex-col justify-center'>
                     <div>{col2.kr}</div>
                     <div className='text-2xl'>{col2.cn}</div>
+                    <div>陽水</div>
                   </div>
                 ) : i === 2 ? (
-                  <div className='h-[65px]  p-1 rounded-[15px] bg-[#18868C] text-white flex flex-col justify-center'>
+                  <div className='h-[50px] sm:h-[65px]  p-1 rounded-[15px] bg-[#18868C] text-white flex flex-col justify-center'>
                     <div>{col2.kr}</div>
                     <div className='text-2xl'>{col2.cn}</div>
+                    <div>陽木</div>
                   </div>
                 ) : (
                   <>
-                    {col2.cn} <p>({col2.kr})</p>
+                    {col2.cn} <p className='break-words'>({col2.kr})</p>
                   </>
                 )}
               </td>
@@ -135,18 +137,20 @@ export default function SajuTable() {
                 } ${i === 2 ? 'border-t border-t-[#8a8a8a]' : ''}`}
               >
                 {i === 1 ? (
-                  <div className='h-[65px] p-1 rounded-[15px] bg-[#c23030] text-white flex flex-col justify-center'>
+                  <div className='h-[50px] sm:h-[65px] p-1 rounded-[15px] bg-[#c23030] text-white flex flex-col justify-center'>
                     <div>{col3.kr}</div>
                     <div className='text-2xl'>{col3.cn}</div>
+                    <div>陰火</div>
                   </div>
                 ) : i === 2 ? (
-                  <div className='h-[65px]  p-1 rounded-[15px] bg-[#c23030] text-white flex flex-col justify-center'>
+                  <div className='h-[50px] sm:h-[65px]  p-1 rounded-[15px] bg-[#c23030] text-white flex flex-col justify-center'>
                     <div>{col3.kr}</div>
                     <div className='text-2xl'>{col3.cn}</div>
+                    <div>陰火</div>
                   </div>
                 ) : (
                   <>
-                    {col3.cn} <p>({col3.kr})</p>
+                    {col3.cn} <p className='break-words'>({col3.kr})</p>
                   </>
                 )}
               </td>
@@ -157,46 +161,50 @@ export default function SajuTable() {
                 } ${i === 2 ? 'border-t border-t-[#8a8a8a]' : ''}`}
               >
                 {i === 1 ? (
-                  <div className='h-[65px]  p-1 rounded-[15px] bg-[#2f2f2f] text-white flex flex-col justify-center'>
+                  <div className='h-[50px] sm:h-[65px] p-1 rounded-[15px] bg-[#2f2f2f] text-white flex flex-col justify-center'>
                     <div>{col4.kr}</div>
                     <div className='text-2xl'>{col4.cn}</div>
+                    <div>陰水</div>
                   </div>
                 ) : i === 2 ? (
-                  <div className='h-[65px]  p-1 rounded-[15px] bg-[#2f2f2f] text-white flex flex-col justify-center'>
+                  <div className='h-[50px] sm:h-[65px] p-1 rounded-[15px] bg-[#2f2f2f] text-white flex flex-col justify-center'>
                     <div>{col4.kr}</div>
                     <div className='text-2xl'>{col4.cn}</div>
+                    <div>陰水</div>
                   </div>
                 ) : (
                   <>
-                    {col4.cn} <p>({col4.kr})</p>
+                    {col4.cn} <p className='break-words'>({col4.kr})</p>
                   </>
                 )}
               </td>
 
               <td
-                className={`border-[2px] border-l p-[4px] w-[20.5%] bg-white ${
+                className={`border-[2px] border-l p-2 w-[20.5%] bg-white ${
                   i === 1 ? 'border-b border-b-[#8a8a8a]' : ''
                 } ${i === 2 ? 'border-t border-t-[#8a8a8a]' : ''}`}
               >
                 {Array.isArray(col5.cn) ? (
                   col5.cn.map((item, j) => (
                     <div key={item + '-' + j}>
-                      {item} <p>({col5.kr[j]})</p>
+                      {item} <p className='break-words'>({col5.kr[j]})</p>
                     </div>
                   ))
                 ) : i === 1 ? (
-                  <div className='h-[65px] rounded-[15px] bg-[#2f2f2f] text-white flex flex-col justify-center'>
-                    <div>{col4.kr}</div>
-                    <div className='text-2xl'>{col4.cn}</div>
-                  </div>
-                ) : i === 2 ? (
-                  <div className='h-[65px] border-2 rounded-[15px] flex flex-col justify-center'>
+                  <div className='h-[50px] sm:h-[65px] p-1 rounded-[15px] bg-[#2f2f2f] text-white flex flex-col justify-center'>
                     <div>{col5.kr}</div>
                     <div className='text-2xl'>{col5.cn}</div>
+                    <div>陰水</div>
+                  </div>
+                ) : i === 2 ? (
+                  <div className='h-[50px] sm:h-[65px] p-1 border-2 rounded-[15px] flex flex-col justify-center'>
+                    <div>{col5.kr}</div>
+                    <div className='text-2xl'>{col5.cn}</div>
+                    <div>陰金</div>
                   </div>
                 ) : (
                   <>
-                    {col5.cn} <p>({col5.kr})</p>
+                    {col5.cn} <p className='break-words'>({col5.kr})</p>
                   </>
                 )}
               </td>
